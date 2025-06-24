@@ -1,5 +1,6 @@
-FETCHCONTENT_DECLARE(
-        googletest
-        URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+add_executable(fnpy_test "fnpy.test.f90")
+target_link_libraries(fnpy_test PUBLIC fort_test fnpy fnpy_cpp_interface)
+add_test(
+        NAME fnpy_test
+        COMMAND fnpy_test
 )
-FETCHCONTENT_MAKEAVAILABLE(googletest)

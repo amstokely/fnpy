@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
-project(fnpy)
+project(fnpy LANGUAGES CXX Fortran C)
 
 set(CMAKE_CXX_STANDARD 23)
+enable_testing()
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+include("add_cpp_test")
+add_subdirectory(external)
+target_include_directories(cnpy INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/external/cnpy")
 add_subdirectory(src)

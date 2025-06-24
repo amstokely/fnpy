@@ -1,0 +1,9 @@
+[submodule "external/cnpy"]
+	path = external/cnpy
+	url = https://github.com/rogersce/cnpy.git
+[submodule "build/external/fort_test"]
+	path = build/external/fort_test
+	url = https://github.com/archermarx/fort_test.git
+[submodule "external/fort_test"]
+	path = external/fort_test
+	url = https://github.com/archermarx/fort_test.git
